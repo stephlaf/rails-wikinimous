@@ -1,10 +1,6 @@
-<h1>Articles#show</h1>
-
 <h3><%= @article.title %></h3>
 <p><%= @article.content %></p>
-
 
 <%= button_to "Back to list", articles_path, method: 'get' %>
 <%= button_to "Modify article", edit_article_path, method: 'get' %>
 <%= button_to "Delete article", article_path(@article), method: 'delete', data: { confirm: 'Really?'} %>
-

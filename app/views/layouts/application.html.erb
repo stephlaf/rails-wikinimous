@@ -4,12 +4,23 @@
     <title>RailsWikinimous</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+
+    <div class="nav nav_flex">
+      
+      <span><%= link_to 'Wikiwhat?', root_path %></span>
+      <span><%= link_to 'New Article', new_article_path %></span>
+
+    </div>
+
+    <div class="container text-center drop-top">
+        <%= yield %>
+    </div>
+
   </body>
 </html>
